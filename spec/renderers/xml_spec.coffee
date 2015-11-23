@@ -30,10 +30,10 @@ describe "XML Renderer", ->
       renderer.render(req,res)
 
       expect(res.send).toHaveBeenCalledWith('<?xml version="1.0" encoding="UTF-8"?>
-<foaas:response xmlns:foaas="http://foaas.com/fuckoff">
-  <foaas:message>ONE</foaas:message>
-  <foaas:subtitle>TWO</foaas:subtitle>
-</foaas:response>')
+<tyaas:response xmlns:tyaas="http://tyaas.com/ty">
+  <tyaas:message>ONE</tyaas:message>
+  <tyaas:subtitle>TWO</tyaas:subtitle>
+</tyaas:response>')
    
     it 'should sanitize params', ->
       req =
@@ -45,8 +45,8 @@ describe "XML Renderer", ->
       renderer.render(req,res)
 
       expect(res.send).toHaveBeenCalledWith('<?xml version="1.0" encoding="UTF-8"?>
-<foaas:response xmlns:foaas="http://foaas.com/fuckoff">
-  <foaas:message>&lt;one&gt;ONE&lt;/one&gt;</foaas:message>
-  <foaas:subtitle>&lt;two&gt;TWO&lt;/two&gt;</foaas:subtitle>
-</foaas:response>')
+<tyaas:response xmlns:tyaas="http://tyaas.com/ty">
+  <tyaas:message>&lt;one&gt;ONE&lt;/one&gt;</tyaas:message>
+  <tyaas:subtitle>&lt;two&gt;TWO&lt;/two&gt;</tyaas:subtitle>
+</tyaas:response>')
    

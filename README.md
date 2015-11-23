@@ -1,13 +1,10 @@
-# FOAAS
+# TYAAS
 
-0.1.8
+0.0.1
 
-[![Build Status](https://travis-ci.org/tomdionysus/foaas.svg?branch=master)](https://travis-ci.org/tomdionysus/foaas)
-[![Dependency Status](https://gemnasium.com/tomdionysus/foaas.svg)](https://gemnasium.com/tomdionysus/foaas)
+TYAAS (Thank You As A Service) provides a modern, RESTful, scalable solution to the common problem of saying Thank You.
 
-FOAAS (Fuck Off As A Service) provides a modern, RESTful, scalable solution to the common problem of telling people to fuck off.
-
-Please see http://foaas.com for API documentation and examples.
+Please see http://tyaas.com for API documentation and examples.
 
 # Installation
 
@@ -21,34 +18,11 @@ Please see http://foaas.com for API documentation and examples.
 
 	npm test
 
-# Clients
-
-API clients are available in a number of languages:
-
-| Language | Name           | Info |
-|:---------|:---------------|:-----|
-| JS/Node  | `foaas-client` | https://www.npmjs.org/package/foaas-client |
-| Ruby     | `foaas-client` | https://github.com/petedmarsh/foaas-client |
-| PHP      | `foaas-php`    | https://github.com/klaude/foaas-php |
-| Python   | `foaas-python` | https://github.com/dmpayton/foaas-python |
-| R        | `rfoaas`       | https://github.com/eddelbuettel/rfoaas |
-| CLI/bash | `foaas.sh`     | https://github.com/RaymiiOrg/foaas.sh |
-| .NET     | `FOAASClient`  | https://github.com/igorkulman/FOAASClient |
-| Java     | `JFOAAS`       | https://github.com/AnUnknownMiner/FOAAS-Java |
-
-# Integrate FOAAS
-
-| Platform/Software | Name                                                                         |
-|:------------------|:-----------------------------------------------------------------------------|
-| Hubot				| https://github.com/github/hubot-scripts/blob/master/src/scripts/foass.coffee |
-| Thunderbird/Seamonkey | https://addons.mozilla.org/en-US/seamonkey/addon/qfo-quick-fuck-off |
-| TelegramBot | https://github.com/rajanand02/TelegramFoaasBot |
-
 # Contributing
 
 ## Adding new operations
 
-To add a new FOAAS operation:
+To add a new TYAAS operation:
 
 1. Fork into your account
 2. Branch into a feature branch `feature/your_operation`

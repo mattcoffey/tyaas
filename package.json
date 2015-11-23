@@ -1,7 +1,7 @@
 {
-  "name": "foaas",
-  "version": "0.1.8",
-  "description": "Fuck Off As A Service",
+  "name": "tyaas",
+  "version": "0.0.1",
+  "description": "Thank You As A Service",
   "engines": {
     "node": "latest"
   },
@@ -10,9 +10,9 @@
     "start": "./node_modules/.bin/coffee lib/server.coffee",
     "test": "./node_modules/.bin/jasmine-node --coffee spec"
   },
-  "repository": "git@github.com:tomdionysus/foaas",
-  "author": "Tom Cully",
-  "license": "WTFPL",
+  "repository": "git@github.com:mattcoffey/tyaas",
+  "author": "Matt Coffey",
+  "license": "MIT",
   "devDependencies": {
     "jasmine-node": "latest",
     "coffee-coverage": "latest"
@@ -22,7 +22,6 @@
     "express" : "latest",
     "body-parser" : "latest",
     "sanitizer": "latest",
-    "newrelic": "latest",
     "xml-escape": "latest",
     "request": "latest",
     "i18next": "latest",

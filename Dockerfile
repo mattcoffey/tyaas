@@ -10,9 +10,9 @@ RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN apt-get update -y && \
     apt-get install -y nodejs build-essential libssl-dev
 
-COPY . /opt/foaas
+COPY . /opt/tyaas
 
-WORKDIR /opt/foaas
+WORKDIR /opt/tyaas
 
 RUN npm install
 

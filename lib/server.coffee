@@ -1,9 +1,7 @@
-require 'newrelic'
-
 path = require 'path'
-FOAAS = require path.resolve(__dirname,'foaas')
+TYAAS = require path.resolve(__dirname,'tyaas')
 
-foaas = new FOAAS({
+tyaas = new TYAAS({
   renderersPath: path.resolve(__dirname,'renderers')
   filtersPath: path.resolve(__dirname,'filters')
   operationsPath: path.resolve(__dirname,'operations')
@@ -11,6 +9,4 @@ foaas = new FOAAS({
 
 port = process.env.PORT || 5000
 
-foaas.start(port)
-
-
+tyaas.start(port)

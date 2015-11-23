@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fuck Off As A Service (FOAAS)</title>
+    <title>Thank You As A Service (TYAAS)</title>
 
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
   </head>
@@ -9,29 +9,21 @@
   <body style="">
     <div class="container">
       <div class="hero-unit">
-        <h1>FOAAS</h1>
-        <h2>Fuck Off As A Service</h2>
-        <p><em>v0.1.8</em></p>
+        <h1>TYAAS</h1>
+        <h2>Thank You As A Service</h2>
+        <p><em>v0.0.1</em></p>
       </div>
     </div>
     <div class="container">
       <div class="content" style="margin-left:50px;">
         <h2 id="introduction">Introduction</h2>
-        <p>FOAAS (Fuck Off As A Service) provides a modern, RESTful, scalable solution to the common problem of telling people to fuck off.</p>
-
-        <h2>What's New in 0.1.8</h2>
-        <ul>
-            <li><strong>/retard</strong> Resource</li>
-            <li><strong>/thumbs</strong> Resource</li>
-            <li><strong>/dosomething</strong> Resource</li>
-            <li><strong>Express 4</strong> backend</li>
-        </ul>
+        <p>TYAAS (Thank You As A Service) provides a modern, RESTful, scalable solution to the common problem of saying Thank You.</p>
 
         <h2 id="api">API</h2>
 
         <h3 id="contentnegotiation">Content Negotiation</h3>
 
-        <p>FOAAS will respond to the following 'Accept:' values with appropriate content</p>
+        <p>TYAAS will respond to the following 'Accept:' values with appropriate content</p>
 
         <ul>
           <li>text/plain - Content will be returned as a plain string.</li>
@@ -54,7 +46,7 @@
             </tr>
             <tr>
                 <td>/version</td>
-                <td>Will return content with the current FOAAS version number.</td>
+                <td>Will return content with the current TYAAS version number.</td>
             </tr>
 
             <tr>
@@ -63,216 +55,24 @@
             </tr>
 
             <tr>
-                <td>/off/:name/:from</td>
-                <td>Will return content of the form 'Fuck off, :name. - :from', e.g. <a href='/off/Tom/Chris' target='_blank'>/off/Tom/Chris</a> will return 'Fuck off, Tom - Chris'</td>
+                <td>/ty/:name/:from</td>
+                <td>Will return content of the form 'Thank You, :name. - :from', e.g. <a href='/ty/Tom/Chris' target='_blank'>/ty/Tom/Chris</a> will return 'Thank You, Tom - Chris'</td>
             </tr>
 
             <tr>
-                <td>/you/:name/:from</td>
-                <td>Will return content of the form 'Fuck you, :name. - :from', e.g. <a href='/you/Tom/Chris' target='_blank'>/you/Tom/Chris</a> will return 'Fuck you, Tom - Chris'</td>
+                <td>/ilu/:name/:from</td>
+                <td>Will return content of the form 'I Love You, :name. - :from', e.g. <a href='/ilu/Tom/Chris' target='_blank'>/ilu/Tom/Chris</a> will return 'I Love You, Tom - Chris'</td>
             </tr>
 
-            <tr>
-                <td>/this/:from</td>
-                <td>Will return content of the form 'Fuck this - :from', e.g. <a href='/this/Chris' target='_blank'>/this/Chris</a> will return 'Fuck this. - Chris'</td>
-            </tr>
-
-            <tr>
-                <td>/that/:from</td>
-                <td>Will return content of the form 'Fuck that. - :from', e.g. <a href='/that/Chris' target='_blank'>/that/Chris</a> will return 'Fuck that. - Chris'</td>
-            </tr>
-
-            <tr>
-                <td>/everything/:from</td>
-                <td>Will return content of the form 'Fuck everything. - :from', e.g. <a href='/everything/Chris' target='_blank'>/everything/Chris</a> will return 'Fuck everything. - Chris'</td>
-            </tr>
-
-            <tr>
-                <td>/everyone/:from</td>
-                <td>Will return content of the form 'Everyone can go and fuck off. - :name', e.g. <a href='/everyone/Tom' target='_blank'>/everyone/Tom</a> will return 'Everyone can go and fuck off. - Tom'</td>
-            </tr>
-
-            <tr>
-                <td>/donut/:name/:from</td>
-                <td>Will return content of the form ':name, go and take a flying fuck at a rolling donut. - :from', e.g. <a href='/donut/Tom/Chris' target='_blank'>/donut/Tom/Chris</a> will return 'Tom, go and take a flying fuck at a rolling donut. - Chris'</td>
-            </tr>
-
-            <tr>
-                <td>/shakespeare/:name/:from</td>
-                <td>Will return content of the form ':name, Thou clay-brained guts, thou knotty-pated fool, thou whoreson obscene greasy tallow-catch! - :from', e.g. <a href='/shakespeare/Falstaff/Prince%20Henry' target='_blank'>/shakespeare/Falstaff/Prince%20Henry</a> will return 'Falstaff, Thou clay-brained guts, thou knotty-pated fool, thou whoreson obscene greasy tallow-catch! - Prince Henry</td>
-            </tr>
-
-            <tr>
-                <td>/linus/:name/:from</td>
-                <td>Will return content of the form ':name, there aren't enough swear-words in the English language, so now I'll have to call you perkeleen vittupää just to express my disgust and frustration with this crap. - :from'.
-                  e.g. <a href='/linus/Tom/Chris'>/linus/Tom/Chris</a></td>
-            </tr>
-
-            <tr>
-                <td>/king/:name/:from</td>
-                <td>Will return content of the form 'Oh fuck off, just really fuck off you total dickface. Christ :name, you are fucking thick. - :from'. e.g. <a href='/king/Tom/Chris' target='_blank'>/king/Tom/Chris</a> </td>
-            </tr>
-
-            <tr>
-                <td>/pink/:from</td>
-                <td>Will return content of the form 'Well, Fuck me pink. - :from'. e.g. <a href='/pink/Tom' target='_blank'>/pink/Tom</a></td>
-            </tr>
-
-            <tr>
-                <td>/life/:from</td>
-                <td>Will return content of the form 'Fuck my life. - :from', e.g. <a href='/life/Phil' target='_blank'>/life/Phil</a> will return 'Fuck my life. - Phil'. </td>
-            </tr>
-
-            <tr>
-                <td>/chainsaw/:name/:from</td>
-                <td>Will return content of the form 'Fuck me gently with a chainsaw, :name. Do I look like Mother Teresa? - :from', e.g. <a href='/chainsaw/Chris/Heather' target='_blank'>/chainsaw/Chris/Heather</a> will return 'Fuck me gently with a chainsaw, Chris. Do I look like Mother Teresa? - Heather'.</td>
-            </tr>
-
-            <tr>
-                <td>/outside/:name/:from</td>
-                <td>Will return content of the form ':name, why don't you go outside and play hide-and-go-fuck-yourself? - :from', e.g. <a href='/outside/BigBrother/TheWorld' target='_blank'>/outside/BigBrother/TheWorld</a> will return 'BigBrother, why don't you go outside and play hide-and-go-fuck-yourself? - TheWorld'.</td>
-            </tr>
-
-            <tr>
-                <td>/:thing/:from</td>
-                <td>Will return content of the form 'Fuck :thing. - :from', e.g. <a href='/pineapples/%E2%99%A5%20Chris' target='_blank'>/pineapples/%E2%99%A5%20Chris</a> will return 'Fuck pineapples. - ♥ Chris' </td>
-            </tr>
-
-            <tr>
-                <td>/thanks/:from</td>
-                <td>Will return content of the form 'Fuck you very much. - :from'. </td>
-            </tr>
-
-            <tr>
-                <td>/flying/:from</td>
-                <td>Will return content of the form 'I don't give a flying fuck. - :from'. e.g. <a href='/flying/batman' target='_blank'>/flying/batman</a> </td>
-            </tr>
-
-            <tr>
-                <td>/fascinating/:from</td>
-                <td>Will return content of the form 'Fascinating story, in what chapter do you shut the fuck up? - :from'. </td>
-            </tr>
-
-            <tr>
-                <td>/madison/:name/:from</td>
-                <td>Will return content of the form 'What you've just said is one of the most insanely idiotic things I have ever heard, :name. At no point in your rambling, incoherent response were you even close to anything that could be considered a rational thought. Everyone in this room is now dumber for having listened to it. I award you no points :name, and may God have mercy on your soul. -  :from'</td>
-            </tr>
-
-            <tr>
-                <td>/cool/:from</td>
-                <td>'Cool story, Bro - :from'</td>
-            </tr>
-
-            <tr>
-                <td>/field/:name/:from/:reference</td>
-                <td>Will return content of the form 'And :name said unto :from, &quot;Verily, cast thine eyes upon the field in which I grow my fucks&quot;, and :from gave witness unto the field, and saw that it was barren. -  :reference'</td>
-            </tr>
-
-            <tr>
-                <td>/nugget/:name/:from</td>
-                <td>Will return content of the form 'Well :name,  aren't you a shining example of a rancid fuck-nugget. - :from'</td>
-            </tr>
-
-            <tr>
-                <td>/yoda/:name/:from</td>
-                <td>Will return content of the form 'Fuck off, you must, :name. - :from'. </td>
-            </tr>
-
-            <tr>
-                <td>/ballmer/:name/:company/:from</td>
-                <td>Will return content of the form 'Fucking :name is a fucking pussy. I'm going to fucking bury that guy, I have done it before, and I will do it again. I'm going to fucking kill :company. - :from' </td>
-            </tr>
-
-            <tr>
-                <td>/what/:from</td>
-                <td>Will return content of the form 'What the fuck?!. - :from".</td>
-            </tr>
-
-            <tr>
-                <td>/because/:from</td>
-                <td>Will return content of the form 'Why? Because Fuck you, that's why. - :from'. </td>
-            </tr>
-
-            <tr>
-                <td>/caniuse/:tool/:from</td>
-                <td>Will return content of the form 'Can you use :tool? Fuck no! - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/bye/:from</td>
-                <td>Will return content of the form 'Fuckity bye! - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/diabetes/:from</td>
-                <td>Will return content of the form 'I'd love to stop and chat to you but I'd rather have type 2 diabetes. - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/bus/:name/:from</td>
-                <td>Will return content of the from 'Christ on a bendy-bus, :name, don't be such a fucking faff-arse. - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/xmas/:name/:from</td>
-                <td>Will return content of the from 'Merry Fucking Christmas, :name. - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/bday/:name/:from</td>
-                <td>Will return content of the from 'Happy Fucking Birthday, :name. - :from'.</td>
-            </tr>
-
-            <tr>
+           <tr>
                 <td>/awesome/:from</td>
-                <td>Will return content of the form 'This is Fucking Awesome. - :from', , e.g. <a href='/awesome/Macklemore' target='_blank'>/awesome/Macklemore</a> will return 'This is Fucking Awesome. - Macklemore'</td>
-            </tr>
-            <tr>
-                <td>/tucker/:from</td>
-                <td>Will return content of the form 'Come the fuck in or fuck the fuck off. - :from', e.g. <a href='/tucker/Malcolm%20Tucker' target='_blank'>/tucker/Malcolm%20Tucker</a> will return 'Come the fuck in or fuck the fuck off. - Malcolm Tucker'</td>
-            </tr>
-            <tr>
-                <td>/bucket/:from</td>
-                <td>Will return content of the form 'Please choke on a bucket of cocks. - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/family/:from</td>
-                <td>Will return content of the from 'Fuck you, your whole family, your pets, and your feces. - :from'.</td>
-            </tr>
-            <tr>
-                <td>/shutup/:name/:from</td>
-                <td>Will return content of the form ':name, shut the fuck up. - :from'.</td>
-            </tr>
-            <tr>
-                <td>/zayn/:from</td>
-                <td>Will return content of the form 'Ask me if I give a motherfuck ?!! - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/keepcalm/:reaction/:from</td>
-                <td>Will return content of the form 'Keep the fuck calm and :reaction! - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/dosomething/:do/:something/:from</td>
-                <td>Will return content of the form ':do the fucking :something! - :from'.</td>
-            </tr>
-
-            <tr>
-                <td>/thumbs/:subject/:from</td>
-                <td>Will return content of the form 'Who has two thumbs and doesn't give a fuck? :subject. - :from', e.g. <a href='/thumbs/This%20Guy/Kob%20Belso' target='_blank'>/thumbs/This%20Guy/Kob%20Belso</a> will return 'Who has two thumbs and doesn't give a fuck? This Guy. - Kob Belso'</td>
-            </tr>
-
-            <tr>
-                <td>/retard/:from</td>
-                <td>Will return content of the form 'You Fucktard! - :from'.</td>
+                <td>Will return content of the form 'You are Awesome. - :from', , e.g. <a href='/awesome/Macklemore' target='_blank'>/awesome/Macklemore</a> will return 'You are Awesome. - Macklemore'</td>
             </tr>
         </table>
 
         <h3 id="filters">Filters</h3>
 
-        <p>Filters are optional output modifiers, and are specified by adding the filter name as query to the HTTP request, e.g. <a href="http://foaas.com/off/Tom/Everyone?shoutcloud">http://foaas.com/off/Tom/Everyone?<em>shoutcloud</em></a></p>
+        <p>Filters are optional output modifiers, and are specified by adding the filter name as query to the HTTP request, e.g. <a href="http://TYAAS.com/ty/Tom/Everyone?shoutcloud">http://TYAAS.com/ty/Tom/Everyone?<em>shoutcloud</em></a></p>
 
         <table class="table">
             <tr>
@@ -289,26 +89,19 @@
             </tr>
         </table>
 
-        <p>Filters can be used in combinations, e.g. <a href="http://foaas.com/off/Tom/Everyone?shoutcloud&amp;i18n=de">http://foaas.com/off/Tom/Everyone?<em>shoutcloud&amp;i18n=de</em></a></p>
+        <p>Filters can be used in combinations, e.g. <a href="http://TYAAS.com/ty/Tom/Everyone?shoutcloud&amp;i18n=de">http://TYAAS.com/ty/Tom/Everyone?<em>shoutcloud&amp;i18n=de</em></a></p>
 
         <h2 id="roadmap">Roadmap</h2>
 
-        <p>FOASS will be extended to include the following functionality:</p>
-
-        <ul>
-        <li>Random fuck offs (or Fuck Off of the Day), without having to specify the operation (off, you, everyone, donut etc) explicitly</li>
-        </ul>
-
         <p>All contributions are very welcome.</p>
 
-        <p><a href="https://twitter.com/foaas">Follow @foaas on twitter!</a></p>
-        <p><a href="https://github.com/tomdionysus/foaas">Fork me on github</a></p>
+        <p><a href="https://twitter.com/tyaasapi">Follow @tyaasapi on twitter!</a></p>
+        <p><a href="https://github.com/mattcoffey/tyaas">Fork me on github</a></p>
 
-        <p>Created by <a href="https://twitter.com/TomDionysus">@TomDionysus</a></p>
-        <p>Maintained with loving Profanity by <a href="https://twitter.com/philip2156">@philip2156</a>, <a href="https://twitter.com/chris_beckett">@chris_beckett</a></p>
+        <p>Created by <a href="https://twitter.com/mattcoffeyuk">@MattCoffeyUk</a></p>
+        <p>Forked from <a href="https://github.com/tomdionysus/foaas">FOAAS</a></p>
 
       </div>
     </div>
-    <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-42551488-1","herokuapp.com"),ga("send","pageview"),ga('create','UA-42553958-1','foaas.com'),ga('send','pageview');</script>
   </body>
 </html>

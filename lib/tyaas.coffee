@@ -4,10 +4,9 @@ methodOverride = require('method-override')
 fs = require 'fs'
 path = require 'path'
 npmPackage = require path.resolve(__dirname,'../package.json')
-newrelic = require 'newrelic'
 _ = require 'underscore'
 
-module.exports = class FOAAS
+module.exports = class TYAAS
 
   VERSION: npmPackage.version
 
@@ -62,18 +61,15 @@ module.exports = class FOAAS
     @app.options "*", (req, res) ->
       res.end()
 
-    # Final case, send 622 All The Fucks
+    # Final case, send 622 Thanks very much
     @app.use @send622
     
     # Renderers
     @loadRenderers(renderersPath)
 
   send622: (req, res) =>
-    # NewRelic hasn't yet adopted the HTTP 6xx (Sarcasm) series of responses.
-    newrelic.setIgnoreTransaction(true)
-
     res.status(622)
-    @output(req, res, "622 - All The Fucks", 'Server invites you to consider the truly monumental amount of fucks it couldn\'t give about your request.')
+    @output(req, res, "622 - Thanks very much", 'Server thanks you for your request, but is sure you meant something else.')
 
   sendIndex: (req, res) ->
     res.sendfile("./public/index.html")
@@ -117,7 +113,7 @@ module.exports = class FOAAS
 
   start: (port) =>
     @app.listen port
-    console.log "FOAAS v#{@VERSION} Started on port #{port}"
+    console.log "TYAAS v#{@VERSION} Started on port #{port}"
 
   output: (req, res, message, subtitle) =>
     req.message = message
@@ -143,7 +139,3 @@ module.exports = class FOAAS
 
     @formats[mime](req, res)
     res.end()
-
-    
-
-

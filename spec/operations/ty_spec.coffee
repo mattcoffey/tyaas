@@ -1,11 +1,11 @@
-operation = require '../../lib/operations/outside'
+operation = require '../../lib/operations/ty'
 
-describe "/outside", ->
+describe "/ty", ->
   it "should have the correct name", ->
-    expect(operation.name).toEqual('Outside')
+    expect(operation.name).toEqual('Thank You')
 
   it "should have the correct url", ->
-    expect(operation.url).toEqual('/outside/:name/:from')
+    expect(operation.url).toEqual('/ty/:name/:from')
 
   it "should have the correct fields", ->
     expect(operation.fields).toEqual([
@@ -21,7 +21,7 @@ describe "/outside", ->
       operation.register(app,null)
 
       expect(app.get).toHaveBeenCalled()
-      expect(app.get.argsForCall[0][0]).toEqual('/outside/:name/:from')
+      expect(app.get.argsForCall[0][0]).toEqual('/ty/:name/:from')
 
     it 'should call output with correct params', ->
       func = null
@@ -35,8 +35,10 @@ describe "/outside", ->
           name: "TESTNAME"
           from: "TESTFROM"
 
-      message = "#{req.params.name}, why don't you go outside and play hide-and-go-fuck-yourself?"
-      subtitle = "- #{req.params.from}"
-
       func(req,'RES')
-      expect(output).toHaveBeenCalledWith(req, 'RES', message, subtitle)
+      expect(output).toHaveBeenCalledWith(
+        req,
+        'RES',
+        'Thank You, TESTNAME.',
+        '- TESTFROM'
+      )

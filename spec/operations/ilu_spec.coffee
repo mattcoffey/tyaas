@@ -1,16 +1,15 @@
-operation = require '../../lib/operations/ballmer'
+operation = require '../../lib/operations/ilu'
 
-describe "/ballmer", ->
+describe "/ilu", ->
   it "should have the correct name", ->
-    expect(operation.name).toEqual('Ballmer')
+    expect(operation.name).toEqual('I Love You')
 
   it "should have the correct url", ->
-    expect(operation.url).toEqual('/ballmer/:name/:company/:from')
+    expect(operation.url).toEqual('/ilu/:name/:from')
 
   it "should have the correct fields", ->
     expect(operation.fields).toEqual([
       { name: 'Name', field: 'name'}
-      { name: 'Company', field: 'company'}
       { name: 'From', field: 'from'}
     ])
 
@@ -22,7 +21,7 @@ describe "/ballmer", ->
       operation.register(app,null)
 
       expect(app.get).toHaveBeenCalled()
-      expect(app.get.argsForCall[0][0]).toEqual('/ballmer/:name/:company/:from')
+      expect(app.get.argsForCall[0][0]).toEqual('/ilu/:name/:from')
 
     it 'should call output with correct params', ->
       func = null
@@ -36,8 +35,10 @@ describe "/ballmer", ->
           name: "TESTNAME"
           from: "TESTFROM"
 
-      message = "Fucking #{req.params.name} is a fucking pussy. I'm going to fucking bury that guy, I have done it before, and I will do it again. I'm going to fucking kill #{req.params.company}."
-      subtitle = "- #{req.params.from}"
-
       func(req,'RES')
-      expect(output).toHaveBeenCalledWith(req, 'RES', message, subtitle)
+      expect(output).toHaveBeenCalledWith(
+        req,
+        'RES',
+        'I Love You, TESTNAME.',
+        '- TESTFROM'
+      )
