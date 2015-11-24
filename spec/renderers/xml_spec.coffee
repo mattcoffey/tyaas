@@ -30,7 +30,7 @@ describe "XML Renderer", ->
       renderer.render(req,res)
 
       expect(res.send).toHaveBeenCalledWith('<?xml version="1.0" encoding="UTF-8"?>
-<tyaas:response xmlns:tyaas="http://tyaas.com/ty">
+<tyaas:response xmlns:tyaas="http://api.tyaas.com/ty">
   <tyaas:message>ONE</tyaas:message>
   <tyaas:subtitle>TWO</tyaas:subtitle>
 </tyaas:response>')
@@ -45,7 +45,7 @@ describe "XML Renderer", ->
       renderer.render(req,res)
 
       expect(res.send).toHaveBeenCalledWith('<?xml version="1.0" encoding="UTF-8"?>
-<tyaas:response xmlns:tyaas="http://tyaas.com/ty">
+<tyaas:response xmlns:tyaas="http://api.tyaas.com/ty">
   <tyaas:message>&lt;one&gt;ONE&lt;/one&gt;</tyaas:message>
   <tyaas:subtitle>&lt;two&gt;TWO&lt;/two&gt;</tyaas:subtitle>
 </tyaas:response>')
