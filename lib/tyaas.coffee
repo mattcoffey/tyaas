@@ -105,7 +105,7 @@ module.exports = class TYAAS
 
     # Default Operation
     router.get '/:thing/:from', (req, res) =>
-      message = "Fuck #{req.params.thing}."
+      message = "Thanks, #{req.params.thing}."
       subtitle = "- #{req.params.from}"
       @output(req, res, message, subtitle)
 
