@@ -4,7 +4,7 @@
 
 TYAAS (Thank You As A Service) provides a modern, RESTful, scalable solution to the common problem of saying Thank You.
 
-Please see http://tyaas.com for API documentation and examples.
+Please see http://www.tyaas.com for API documentation and examples.
 
 # Installation
 
