@@ -1,1 +1,1 @@
-docker build -t=tyaas:latest .
+docker build -t mcoffey/tyaas:latest .

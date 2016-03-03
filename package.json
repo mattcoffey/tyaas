@@ -24,7 +24,7 @@
     "sanitizer": "latest",
     "xml-escape": "latest",
     "request": "latest",
-    "i18next": "latest",
+    "i18next": "1.10.6",
     "md5": "latest",
     "underscore": "latest",
     "method-override": "latest"
