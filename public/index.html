@@ -11,7 +11,7 @@
       <div class="hero-unit">
         <h1>TYAAS</h1>
         <h2>Thank You As A Service</h2>
-        <p><em>v0.0.1</em></p>
+        <p><em>v0.0.2</em></p>
       </div>
     </div>
     <div class="container">
@@ -67,6 +67,16 @@
            <tr>
                 <td>/awesome/:from</td>
                 <td>Will return content of the form 'You are Awesome. - :from', , e.g. <a href='/awesome/Macklemore' target='_blank'>/awesome/Macklemore</a> will return 'You are Awesome. - Macklemore'</td>
+            </tr>
+
+           <tr>
+                <td>/mothers/:from</td>
+                <td>Will return content of the form 'Happy Mother's Day! - :from', , e.g. <a href='/mothers/Matt' target='_blank'>/mothers/Matt</a> will return 'Happy Mother's Day! - Matt'</td>
+            </tr>
+
+            <tr>
+                <td>/birthday/:name/:from</td>
+                <td>Will return content of the form ', :name. - :from', e.g. <a href='/birthday/Peter/Matt' target='_blank'>/birthday/Peter/Matt</a> will return 'Happy Birthday, Peter! - Matt'</td>
             </tr>
         </table>
 
