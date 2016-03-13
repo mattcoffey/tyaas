@@ -1,6 +1,6 @@
 {
   "name": "tyaas",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Thank You As A Service",
   "engines": {
     "node": "latest"
