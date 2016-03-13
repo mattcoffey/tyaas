@@ -39,6 +39,6 @@ describe "/wd", ->
       expect(output).toHaveBeenCalledWith(
         req,
         'RES',
-        'Well Done, TESTNAME!',
+        'Well Done TESTNAME!',
         '- TESTFROM'
       )

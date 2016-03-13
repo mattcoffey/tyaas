@@ -39,6 +39,6 @@ describe "/ty", ->
       expect(output).toHaveBeenCalledWith(
         req,
         'RES',
-        'Thank You, TESTNAME.',
+        'Thank You TESTNAME.',
         '- TESTFROM'
       )

@@ -39,6 +39,6 @@ describe "/ilu", ->
       expect(output).toHaveBeenCalledWith(
         req,
         'RES',
-        'I Love You, TESTNAME.',
+        'I Love You TESTNAME.',
         '- TESTFROM'
       )

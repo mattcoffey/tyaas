@@ -39,6 +39,6 @@ describe "/birthday", ->
       expect(output).toHaveBeenCalledWith(
         req,
         'RES',
-        'Happy Birthday, TESTNAME!',
+        'Happy Birthday TESTNAME!',
         '- TESTFROM'
       )
