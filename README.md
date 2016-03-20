@@ -1,6 +1,6 @@
 # TYAAS
 
-0.0.2
+0.0.3
 
 TYAAS (Thank You As A Service) provides a modern, RESTful, scalable solution to the common problem of saying Thank You.
 
