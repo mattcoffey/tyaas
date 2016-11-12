@@ -1,1 +1,1 @@
-docker run --net=host --name tyaas -t mcoffey/tyaas:latest
+docker run --name tyaas --net=host -t mcoffey/tyaas:latest &

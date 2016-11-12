@@ -1,0 +1,1 @@
+docker build -t mcoffey/armv7l-tyaas:latest -f Dockerfile_armv7l .

@@ -1,0 +1,1 @@
+docker run --name tyaas --net=host -t mcoffey/armv7l-tyaas:latest &
